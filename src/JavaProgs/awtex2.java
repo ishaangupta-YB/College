@@ -1,6 +1,5 @@
 package JavaProgs;
 
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,7 +16,7 @@ public class awtex2 {
             f.add(mathsl);
 
             TextField maths = new TextField();
-            maths.setBounds(110,50, 150,30);
+            maths.setBounds(130,50, 150,30);
             f.add(maths);
 
             Label physicsl = new Label("Physics");
@@ -25,7 +24,7 @@ public class awtex2 {
             f.add(physicsl);
 
             TextField physics = new TextField();
-            physics.setBounds(110,90, 150,30);
+            physics.setBounds(130,90, 150,30);
             f.add(physics);
 
             Label cheml = new Label("Chemistry");
@@ -33,7 +32,7 @@ public class awtex2 {
             f.add(cheml);
 
             TextField chem = new TextField();
-            chem.setBounds(110,140, 150,30);
+            chem.setBounds(130,140, 150,30);
             f.add(chem);
 
             Label ans = new Label();
@@ -48,7 +47,7 @@ public class awtex2 {
                         int m = Integer.parseInt(maths.getText().toString());
                         int p = Integer.parseInt(physics.getText().toString());
                         int c = Integer.parseInt(chem.getText().toString());
-                        ans.setText(String.valueOf(m+p+c));
+                        ans.setText("Total value is "+String.valueOf(m+p+c));
                   }
             });
             f.add(total);
@@ -62,7 +61,7 @@ public class awtex2 {
                         int p = Integer.parseInt(physics.getText().toString());
                         int c = Integer.parseInt(chem.getText().toString());
                         int per = (m+p+c)/3;
-                        ans.setText(String.valueOf(per)+"%");
+                        ans.setText("Percentage is "+String.valueOf(per)+"%");
                   }
             });
             f.add(perce);
