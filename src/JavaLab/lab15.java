@@ -3,106 +3,69 @@ package JavaLab;
 import java.awt.*;
 import java.awt.event.*;
 
-//public class lab15 extends MouseAdapter {
-//      Frame f;
-//      lab15(){
-//            f = new Frame("Lab 15");
-//            f.addMouseListener(this);
-//            f.setLayout(null);
-//            f.setSize(600,600);
-//            f.setVisible(true);
-//      }
-//
-//      @Override
-//      public void mouseClicked(MouseEvent e) {
-//            System.out.println("Clicked");
-//      }
-//
-//      @Override
-//      public void mousePressed(MouseEvent e) {
-//            System.out.println("Pressed");
-//      }
-//
-//      public static void main(String[] args) {
-//            new lab15();
-//      }
-//}
+public class lab15 extends MouseAdapter {
 
-//public class lab15 extends MouseMotionAdapter {
-//      Frame f;
-//      lab15(){
-//            f = new Frame("Lab 15");
-//            f.addMouseMotionListener(this);
-//            f.setLayout(null);
-//            f.setSize(600,600);
-//            f.setVisible(true);
-//      }
-//
-//      @Override
-//      public void mouseDragged(MouseEvent e) {
-//            System.out.println("Mouse Dragged");
-//      }
-//
-//      @Override
-//      public void mouseMoved(MouseEvent e) {
-//            System.out.println("Mouse Moved");
-//      }
-//
-//      public static void main(String[] args) {
-//            new lab15();
-//      }
-//}
-
-//public class lab15 extends KeyAdapter {
-//      Frame f;
-//      TextField tf;
-//      lab15(){
-//            f = new Frame("Lab 15");
-//            tf = new TextField();
-//            tf.setBounds(200,200,300,30);
-//            f.add(tf);
-//
-//            tf.addKeyListener(this);
-//
-//            f.setLayout(null);
-//            f.setSize(600,600);
-//            f.setVisible(true);
-//      }
-//
-//      @Override
-//      public void keyPressed(KeyEvent e) {
-//            System.out.println("Key Pressed");
-//      }
-//
-//      @Override
-//      public void keyReleased(KeyEvent e) {
-//            System.out.println("Key Released");
-//      }
-//
-//      public static void main(String[] args) {
-//            new lab15();
-//      }
-//}
-
-public class lab15 extends FocusAdapter {
-      Frame f;
-      TextField tf;
-      lab15(){
-            f = new Frame("Lab 15");
-            f.addFocusListener(this);
+      lab15() {
+            Frame f = new Frame("lab15");
             f.setLayout(null);
-            f.setSize(600,600);
+            f.setSize(500, 500);
+
+            Label mathsl = new Label("Maths");
+            mathsl.setBounds(30, 50, 50, 30);
+            f.add(mathsl);
+
+            TextField maths = new TextField();
+            maths.setBounds(130, 50, 150, 30);
+            f.add(maths);
+
+            Label physicsl = new Label("Physics");
+            physicsl.setBounds(30, 90, 50, 30);
+            f.add(physicsl);
+
+            TextField physics = new TextField();
+            physics.setBounds(130, 90, 150, 30);
+            f.add(physics);
+
+            Label cheml = new Label("Chemistry");
+            cheml.setBounds(30, 140, 100, 30);
+            f.add(cheml);
+
+            TextField chem = new TextField();
+            chem.setBounds(130, 140, 150, 30);
+            f.add(chem);
+
+            Label ans = new Label();
+            ans.setBounds(100, 180, 300, 50);
+            f.add(ans);
+
+            Button total = new Button("Total");
+            total.setBounds(50, 230, 100, 40);
+            total.addActionListener(new ActionListener() {
+                  @Override
+                  public void actionPerformed(ActionEvent e) {
+                        int m = Integer.parseInt(maths.getText().toString());
+                        int p = Integer.parseInt(physics.getText().toString());
+                        int c = Integer.parseInt(chem.getText().toString());
+                        ans.setText("Total value is " + String.valueOf(m + p + c));
+                  }
+            });
+            f.add(total);
+
+            Button perce = new Button("Percent");
+            perce.setBounds(170, 230, 100, 40);
+            perce.addActionListener(new ActionListener() {
+                  @Override
+                  public void actionPerformed(ActionEvent e) {
+                        int m = Integer.parseInt(maths.getText().toString());
+                        int p = Integer.parseInt(physics.getText().toString());
+                        int c = Integer.parseInt(chem.getText().toString());
+                        int per = (m + p + c) / 3;
+                        ans.setText("Percentage is " + String.valueOf(per) + "%");
+                  }
+            });
+            f.add(perce);
+
             f.setVisible(true);
-      }
-
-      @Override
-      public void focusGained(FocusEvent e) {
-            System.out.println("Focus Gained");
-      }
-
-      @Override
-      public void focusLost(FocusEvent e) {
-            System.out.println("Focus Lost");
       }
 
       public static void main(String[] args) {
