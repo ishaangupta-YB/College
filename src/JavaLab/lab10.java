@@ -10,10 +10,9 @@ public class lab10 {
             System.out.println("Full name "+name);
             String[] s = name.split(" ");
             String ans = "";
-            for(int i=0;i<s.length-1;i++){
-                  ans+=s[i].toUpperCase().charAt(0)+" ";
-            }
+            for(int i=0;i<s.length-1;i++)
+                  ans+=s[i].toUpperCase().charAt(0)+". ";
             ans+=s[s.length-1];
-            System.out.println("Answer "+ans);
+            System.out.println("Abbreviated Name "+ans);
       }
 }
