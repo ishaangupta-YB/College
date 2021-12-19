@@ -3,7 +3,7 @@ package JavaLab;
 import java.awt.*;
 import java.awt.event.*;
 
-public class lab15 extends MouseAdapter {
+public class lab15 {
 
       lab15() {
             Frame f = new Frame("lab15");
@@ -46,7 +46,7 @@ public class lab15 extends MouseAdapter {
                         int m = Integer.parseInt(maths.getText().toString());
                         int p = Integer.parseInt(physics.getText().toString());
                         int c = Integer.parseInt(chem.getText().toString());
-                        ans.setText("Total value is " + String.valueOf(m + p + c));
+                        ans.setText("Total marks is " + String.valueOf(m + p + c));
                   }
             });
             f.add(total);
