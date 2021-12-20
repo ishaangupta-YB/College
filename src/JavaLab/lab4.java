@@ -26,8 +26,8 @@ class area extends shape{
 public class lab4 {
       public static void main(String[] args) {
             area a = new area();
-            a.circleArea(5);
-            a.squareArea(5);
-            a.rectangleArea(2,3);
+            a.circleArea(6);
+            a.squareArea(4);
+            a.rectangleArea(3,2);
       }
 }

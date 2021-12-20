@@ -105,23 +105,23 @@ class Queue<T>{
 
 public class lab1 {
 
-	public static void main(String[] args) {  
+	public static void main(String[] args) {
+//		System.out.println("Stack implementation");
 //		Stack<Integer> st = new Stack<Integer>();
-//		for(int i=0;i<1015;i++) st.push(i);
+//		for(int i=1;i<=10;i++) st.push(i);
 //		st.display();
-//		st.pop();
-//		System.out.println(st.peek()+" "+st.length());
+//		System.out.println("Popped element "+st.pop());
+//		System.out.println("Peeked element "+st.peek()+"\nLength - "+st.length());
 		
 //		Stack<String> st = new Stack<String>();
 //		for(int i=1;i<1015;i++) st.push(String.valueOf(i));
 //		st.display();
 //		st.pop();
-//		System.out.println(st.peek()+"\tLength- "+st.length()); 
-		
+//		System.out.println(st.peek()+"\tLength- "+st.length());
+		System.out.println("Queue implementation");
 		Queue<Integer> q = new Queue<Integer>();
-		for(int i=0;i<1089;i++) q.enqueue(i);
+		for(int i=1;i<=10;i++) q.enqueue(i);
 		q.display();
-		System.out.println(q.dequeue()+" "+q.dequeue()+"\tlength-"+q.length());
+		System.out.println("Dequeue element "+q.dequeue()+"\nlength-"+q.length());
 	}
-
 } 

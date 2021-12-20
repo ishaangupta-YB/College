@@ -13,7 +13,7 @@ public class lab3 {
 				for(int k=0;k<3;k++) res[i][j] = a[i][k] + b[k][j];
 			}
 		}
-		
+		System.out.println("Result");
 		for(int i=0;i<3;i++) {
 			for(int j=0;j<3;j++) System.out.print(res[i][j]+" ");
 			System.out.println();

@@ -8,7 +8,7 @@ public class lab12 {
 		
 		for(int i=5;i>=0;i--) {
 			try {
-				System.out.println(t.getName());
+				System.out.println(t.getName()+" counter "+i);
 				Thread.sleep(6000);
 			} catch (InterruptedException e) { 
 				e.printStackTrace();

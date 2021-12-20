@@ -95,9 +95,9 @@ class focusAdapt extends FocusAdapter {
 
 public class lab16{
       public static void main(String[] args) {
-            new mouseAdapt();
-            new mma();
-            new keyAdapt();
+//            new mouseAdapt();
+//            new mma();
+//            new keyAdapt();
             new focusAdapt();
       }
 }

@@ -11,9 +11,9 @@ public class lab7 {
 				try {
 					int x = Integer.parseInt(args[0]);
 					int y = Integer.parseInt(args[1]);
-					
+					System.out.println("Input numbers are "+x+" and "+y);
 					try {
-						System.out.println(x/y);
+						System.out.println("After division "+x/y);
 					}catch(ArithmeticException e) {
 						System.out.println(e.getMessage().toString());
 					}
