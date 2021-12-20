@@ -17,5 +17,4 @@ public class lab12 {
 		t.setName("gupta");
 		System.out.println(t.getName());
 	}
-
 }
