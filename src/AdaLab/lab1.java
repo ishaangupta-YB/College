@@ -3,7 +3,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class lab1 {
 	static void linear_search(int[] a,int x) {
-		System.out.println("Using linear search in array "+Arrays.toString(a)); for(int i=0;i<a.length;i++) {
+		System.out.println("Using linear search in array "+Arrays.toString(a));
+
+		for(int i=0;i<a.length;i++) {
 			if(a[i] == x) {
 				System.out.println("Element found at index "+i);
 				return;
@@ -36,6 +38,7 @@ public class lab1 {
 		for(int i=0;i<n;i++) a[i] = sc.nextInt();
 		System.out.println("Enter element to be searched ");
 		int x= sc.nextInt();
+
 		linear_search(a,x);
 		binary_search(a,x);
 	}

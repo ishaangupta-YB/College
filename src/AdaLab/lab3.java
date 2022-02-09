@@ -31,15 +31,6 @@ public class lab3 {
                   split(b, B21, n / 2, 0);
                   split(b, B22, n / 2, n / 2);
 
-                  /**
-                   * p1 = (A11 + A22)(B11 + B22)
-                   * p2 = (A21 + A22) B11
-                   * p3 = A11 (B12 - B22)
-                   * p4 = A22 (B21 - B11)
-                   * p5 = (A11 + A12) B22
-                   * p6 = (A21 - A11) (B11 + B12)
-                   * p7 = (A12 - A22) (B21 + B22)
-                   **/
                   int[][] p1 = multiply(add(A11, A22), add(B11, B22));
                   int[][] p2 = multiply(add(A21, A22), B11);
                   int[][] p3 = multiply(A11, sub(B12, B22));
@@ -47,12 +38,7 @@ public class lab3 {
                   int[][] p5 = multiply(add(A11, A12), B22);
                   int[][] p6 = multiply(sub(A21, A11), add(B11, B12));
                   int[][] p7 = multiply(sub(A12, A22), add(B21, B22));
-                  /**
-                   * C11 = p1 + p4 - p5 + p7
-                   * C12 = p3 + p5
-                   * C21 = p2 + p4
-                   * C22 = p1 - p2 + p3 + p6
-                   **/
+
                   int[][] C11 = add(sub(add(p1, p4), p5), p7);
                   int[][] C12 = add(p3, p5);
                   int[][] C21 = add(p2, p4);
@@ -75,7 +61,6 @@ public class lab3 {
             return c;
       }
 
-      // method to subract two matrices
       static int[][] sub(int[][] a, int[][] b) {
             int n = a.length;
             int[][] c = new int[n][n];
@@ -85,14 +70,12 @@ public class lab3 {
             return c;
       }
 
-      // method to split parent matrix into child matrices
       static void split(int[][] parentMatrix, int[][] childMatrix, int fromIndex, int toIndex) {
             for (int i1 = 0, i2 = fromIndex; i1 < childMatrix.length; i1++, i2++)
                   for (int j1 = 0, j2 = toIndex; j1 < childMatrix.length; j1++, j2++)
                         childMatrix[i1][j1] = parentMatrix[i2][j2];
       }
 
-      // method to join child matrices into parent matrix
       static void join(int[][] childMatrix, int[][] parentMatrix, int fromIndex, int toIndex) {
             for (
                     int i1 = 0, i2 = fromIndex;

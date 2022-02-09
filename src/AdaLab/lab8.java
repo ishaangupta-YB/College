@@ -9,7 +9,7 @@ class CreateGraph {
             }
       }
 
-      ;
+
       int V, E;
       CreateEdge edge[];
 
